@@ -30,4 +30,4 @@ let cvsparams = {
                 看完两个demo后我觉得实在没有太多的技术含量,又联想起前些天看到过的这个炫酷时钟,我就想基于canvas做这样一个项目,算是对canvas的复习与学习吧!
                 
 ````
-
+![Image text](./fashion-clock.png)
