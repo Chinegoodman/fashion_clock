@@ -1,13 +1,22 @@
 **借鉴最近流行的 炫酷中标做的一个H5**
 
-
-
-使用时需要做一个全局的参数设置,参数必须,但是值可以为空
+计划将这个项目发布到npm上去
 ````
-let cvsparams = {
+ npm install psf-fashion-clock
+ 
+ import from 'psf-fashion-clock'
+ dengdaiyanzheng tijiao
+````
+
+将此项目的方法抽离出来了，引入项目js后，调用function fashion_clock即可
+````
+
+        // 调用此方法需要传的的params的值应为 下边cvsparams的结构 若项目用在移动端时,需要使用css3的scale 根据当前宽度与最小宽度716的比值去设置缩放,可参考例子index.html进行动态设置
+        例子：   项目页面index.html中
+        let cvsparams = {
             // 选择器==画布宽高值==中间的字==中间字大小==时间字体大小==圆盘背景色==背景图片==中间字颜色==时间字体颜色==画布背景色(默认透明)==圆盘的outline色
             selectdom:'div>#clockcvs',      //选择器
-            cvswh:'',      //画布宽高值
+            cvswh:viewwidth,      //画布宽高值
             word:'庞',      //中间的字
             wordsize:'',      //中间字大小
             timesize:'',      //时间字体大小
@@ -19,6 +28,7 @@ let cvsparams = {
             outlinecolor:'',      //圆盘的outline色
             currentboxcolor:''      //当前时间框的填充色
         }
+        fashion_clock(cvsparams)
 `````
 
 ````
