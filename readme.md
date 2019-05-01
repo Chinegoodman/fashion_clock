@@ -2,10 +2,8 @@
 
 计划将这个项目发布到npm上去
 ````
- npm install psf-fashion-clock
+npm i fashionclock
  
- import from 'psf-fashion-clock'
- dengdaiyanzheng tijiao
 ````
 
 将此项目的方法抽离出来了，引入项目js后，调用function fashion_clock即可
@@ -42,4 +40,4 @@
 项目过程:       初期,我个人没有头绪,就在网上找寻demo,看了两个demo的实现效果,就是根据奖品数据,通过canas做一个底部的轮盘,在轮盘上边放一个箭头图片,来控制箭头的指向,同时给箭头的旋转添加transition属性,来过度动画
                 看完两个demo后我觉得实在没有太多的技术含量,又联想起前些天看到过的这个炫酷时钟,我就想基于canvas做这样一个项目,算是对canvas的复习与学习吧!
 ````
-![Image text](./fashion-clock.png)
+![Image text](http://ooo0o.com/28e3e201905020148065578.png)
