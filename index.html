@@ -2,15 +2,26 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>画布时钟</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #clockcvs{
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <a href="https://github.com/Chinegoodman" target="_blank"><img width="40px" src="http://ooo0o.com/cf6aa201904191633225163.png" alt="github"></a>
     <div id="cvsbox">
         <canvas id="clockcvs"></canvas>
     </div>
-    <button onclick="jieping()">获取此刻的时间截屏</button>
-    <script>
+<!--    <button onclick="jieping()">获取此刻的时间截屏</button>-->
+    <!--<script>
         // ===========================================截屏事件 开始===========================================
         function jieping(){
             let imgdata = document.getElementById('clockcvs').toDataURL('image/png');
@@ -29,7 +40,7 @@
         }
         // ===========================================文件自动下载 结束===========================================
 
-        // ===========================================互补及动效js 开始===========================================
+        // ===========================================画布及动效js 开始===========================================
         let cvsparams = {
             // 选择器==画布宽高值==中间的字==中间字大小==时间字体大小==圆盘背景色==背景图片==中间字颜色==时间字体颜色==画布背景色(默认透明)==圆盘的outline色
             selectdom:'div>#clockcvs',      //选择器
@@ -61,7 +72,7 @@
             shi = num_to_word(shi);
             fen = num_to_word(fen);
             miao = num_to_word(miao);
-            // console.log('----'+shi+':'+fen+':'+miao+'----');
+            // console.log('&#45;&#45;&#45;&#45;'+shi+':'+fen+':'+miao+'&#45;&#45;&#45;&#45;');
             resettime(shi+'点',fen+'分',miao+'秒')
         }
         // 把 1-59的数字转换为汉字
@@ -443,7 +454,35 @@
                 ctx.restore();
             }
         }
-        // ===========================================互补及动效js 结束===========================================
+        // ===========================================画布及动效js 结束===========================================
+    </script>-->
+    <script src="./psf_fashion_clock.js"></script>
+    <script>
+        let viewwidth = document.documentElement.clientWidth;
+        if(viewwidth<716){
+            viewwidth = 716;
+            let scalenum = document.documentElement.clientWidth/716;
+
+            document.getElementById('clockcvs').style.transformOrigin = '0 0'
+            document.getElementById('clockcvs').style.transform = 'scale('+scalenum+','+scalenum+')';
+            document.getElementById('clockcvs').parentNode.style.height = 716*scalenum +'px';
+        };
+        let cvsparams = {
+            // 选择器==画布宽高值==中间的字==中间字大小==时间字体大小==圆盘背景色==背景图片==中间字颜色==时间字体颜色==画布背景色(默认透明)==圆盘的outline色
+            selectdom:'div>#clockcvs',      //选择器
+            cvswh:viewwidth,      //画布宽高值
+            word:'庞',      //中间的字
+            wordsize:'',      //中间字大小
+            timesize:'',      //时间字体大小
+            bgclolr:'',      //圆盘背景色
+            bgpic:'',      //背景图片
+            wordcolor:'',      //中间字颜色
+            timecolor:'',      //时间字体颜色
+            boxbgclolr:'',      //画布背景色(默认透明)
+            outlinecolor:'',      //圆盘的outline色
+            currentboxcolor:''      //当前时间框的填充色
+        }
+        fashion_clock(cvsparams)
     </script>
 </body>
 </html>
