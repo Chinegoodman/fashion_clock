@@ -1,6 +1,8 @@
 **借鉴最近抖音平台及华为应用主题里流行的 炫酷时钟做的一个H5**
 
-已经发布到npm上去(https://www.npmjs.com/package/fashionclock)
+线上地址:http://www.ooo0o.com/2019/fashion_clock/
+
+JS包已经发布到npm上去(https://www.npmjs.com/package/fashionclock)
 ````
         npm i fashionclock
 
