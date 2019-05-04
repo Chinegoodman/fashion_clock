@@ -1,4 +1,4 @@
-function fashion_clock(params) {
+function fashionclock(params) {
 
     // 调用此方法需要传的params的值应为 下边cvsparams的结构 若项目用在移动端时,需要使用css3的scale 根据当前宽度与最小宽度716的比值去设置缩放,可参考例子index.html进行动态设置
 
